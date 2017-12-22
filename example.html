@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>cron-builder.js</title>
+	<!-- https://github.com/Zneiat/cron-builder.js -->
+</head>
+<body>
+
+<div class="cron-builder"></div>
+
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script src="cron-builder.js"></script>
+<script>
+(function () {
+    window.CronEditor = new CronBuilder($('.cron-builder'));
+    CronEditor.setOnChange(function (result) {
+        console.log(result);
+    });
+}());
+</script>
+</body>
+</html>
